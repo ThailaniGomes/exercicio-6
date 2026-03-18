@@ -1,8 +1,5 @@
 ---
 import "../styles/global.css";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 ---
 
@@ -15,9 +12,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
   <title>Pagina Clone</title>
 </head>
 <body>
-  <div class="flex">
+  <div class="flex ">
     <!--barra lateral-->
-    <nav class="flex flex-col basis-40 m-4 justify-between ">
+    <nav class="flex flex-col basis-40 justify-between h-screen">
       <div class="logo">
         <img
           class="icone-logo"
@@ -26,13 +23,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
         />
       </div>
 
-      <div class="grid grid-flow-row">
-        <span class="p-2">home</span>
-        <span class="p-2">explore</span>
-        <span class="p-2">backup_table</span>
-        <span class="p-2">add_box</span>
-        <span class="p-2">notifications</span>
-        <span class="p-2">forum</span>
+      <div class="grid grid-flow-row gap-8 content-center">
+        <span >home</span>
+        <span>explore</span>
+        <span>backup_table</span>
+        <span>add_box</span>
+        <span>notifications</span>
+        <span>forum</span>
       </div>
 
       <div class="configuracoes">
@@ -44,84 +41,84 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
       <div class="">
         <!--barra de pesquisa perfil-->
         <div class="flex">
-          <div class=" m-6 grow">
-            <Input  placeholder="Pesquisa" />
+          <div class=" m-6 grow flex-1 ">
+            <input class="bg-zinc-100 rounded-md w-360 h-10" placeholder="Pesquisa" type="text">
           </div>
           <div class="perfil m-6">
-            <Avatar>
+            <Avatar class="w-12 h-12" src="">
           </div>
         </div>
         <!--sugestoes-->
         <div>
-          <ul class="flex ml-6 m-4  text-lg font-bold justify-between ">
-            <li class=" mr-4 ">Todos</li>
-            <li class="mr-4">Decoração</li>
-            <li class="mr-4">Maquiagem</li>
-            <li class="mr-4">Lontras fofinhas</li>
-            <li class="mr-4">Pintura</li>
-            <li class="mr-4">Parede</li>
-            <li class="mr-4">Quadrinhos</li>
-            <li class="mr-4">Origami</li>
-            <li class="mr-4">Natal</li>
-            <li class="mr-4">Decoração</li>
+          <ul class="flex ml-6 gap-4  text-lg font-bold justify-between ">
+            <li>Todos</li>
+            <li>Decoração</li>
+            <li>Maquiagem</li>
+            <li>Lontras fofinhas</li>
+            <li>Pintura</li>
+            <li>Parede</li>
+            <li>Quadrinhos</li>
+            <li>Origami</li>
+            <li>Natal</li>
+            <li>Decoração</li>
           </ul>
         </div>
       </div>
 
       <!--fotos-->
       <div >
-        <ul class="grid grid-col-6 ">
+        <ul class="grid grid-cols-5 grid-flow-row-dense gap-5 m-6">
           <li class="">
             <img
-              class="rounded-md"
+              class="rounded-lg "
               src="https://i.pinimg.com/736x/df/df/b5/dfdfb57bd8f4c3ac86819072f78c309b.jpg"
             />
           </li>
           <li class="">
             <img
-              class="rounded-md"
+              class="rounded-lg"
               src="https://i.pinimg.com/736x/43/32/79/433279ac978e0081e0690d486af8d321.jpg"
             />
           </li>
           <li>
             <img
-              class="rounded-md"
+              class="rounded-lg"
               src="https://i.pinimg.com/736x/1e/ce/5f/1ece5fff6b4cff7d74e258587fc7824c.jpg"
             />
           </li>
           <li>
             <img
-              class="rounded-md"
+              class="rounded-lg"
               src="https://i.pinimg.com/736x/5b/ab/13/5bab139f010287e92c264e25a4eb65fd.jpg"
             />
           </li>
           <li>
             <img
-              class="rounded-md"
+              class="rounded-lg"
               src="https://i.pinimg.com/736x/06/1a/cb/061acba0605fc5a43e096e785487a55f.jpg"
             />
           </li>
           <li>
             <img
-              class="rounded-md"
+              class="rounded-lg"
               src="https://i.pinimg.com/1200x/20/36/2f/20362f089cf6f9f27957936403cda4d0.jpg"
             />
           </li>
           <li>
             <img
-              class="rounded-md"
+              class="rounded-lg"
               src="https://i.pinimg.com/1200x/5e/85/96/5e85967027ea4221eac470adac7c1ff9.jpg"
             />
           </li>
           <li>
             <img
-              class="rounded-md"
+              class="rounded-lg"
               src="https://i.pinimg.com/1200x/4c/2c/2b/4c2c2b7038c3e4a13ec13c9d407ac0a8.jpg"
             />
           </li>
           <li>
             <img
-              class="rounded-md"
+              class="rounded-lg"
               src="https://i.pinimg.com/736x/07/a6/96/07a69694c69d43de48d1bed07f31be4d.jpg"
             />
           </li>
@@ -133,13 +130,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
           </li>
           <li>
             <img
-              class="rounded-md"
+              class="rounded-lg"
               src="https://i.pinimg.com/1200x/1f/f6/13/1ff613287c6a853049bac770246379c5.jpg"
             />
           </li>
           <li>
             <img
-              class="rounded-md"
+              class="rounded-lg"
               src="https://i.pinimg.com/736x/ec/e1/7b/ece17b1c77610b62cd2155ef8550a712.jpg"
             />
           </li>
