@@ -1,6 +1,12 @@
 ---
-import "./styles/global.css";
+import "../styles/global.css";
 import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+
+const setDate = ()=> {
+  console.log("funcionou") 
+  alert("funcionou")
+};
 ---
 
 <head>
@@ -24,6 +30,13 @@ import { Button } from "@/components/ui/button";
         <p>content</p>
       </div>
     </div>
+  </div>
+  <div>
+    <Calendar
+      mode="single"
+      onSelect={setDate}
+      className="rounded-lg border"
+    />
   </div>
   <div class="grid place-items-center h-screen content-center">
     <Button>Button</Button>
