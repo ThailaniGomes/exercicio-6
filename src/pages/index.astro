@@ -2,11 +2,8 @@
 import "../styles/global.css";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-
-const setDate = ()=> {
-  console.log("funcionou") 
-  alert("funcionou")
-};
+import { Input } from "@/components/ui/input";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 ---
 
 <head>
@@ -15,30 +12,151 @@ const setDate = ()=> {
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
-  <title>Astro</title>
+  <title>Pagina Clone</title>
 </head>
 <body>
   <div class="flex">
-    <div class="" id="header">
-      <p>header</p>
-    </div>
+    <!--barra lateral-->
+    <nav class="flex flex-col basis-40 m-4 justify-between ">
+      <div class="logo">
+        <img
+          class="icone-logo"
+          src="https://images.ctfassets.net/h67z7i6sbjau/5zteWRcC1qbgLZoClcMmYl/a0391fdc321eddce7de41152108723b5/Brand_Guidelines_hero_2x.jpg?fm=webp&q=85"
+          alt="Logo"
+        />
+      </div>
+
+      <div class="grid grid-flow-row">
+        <span class="p-2">home</span>
+        <span class="p-2">explore</span>
+        <span class="p-2">backup_table</span>
+        <span class="p-2">add_box</span>
+        <span class="p-2">notifications</span>
+        <span class="p-2">forum</span>
+      </div>
+
+      <div class="configuracoes">
+        <span class="material-icons">settings</span>
+      </div>
+    </nav>
+    <!--conteudo-->
     <div class="">
-      <div class="" id="sidebar">
-        <p>sidebar</p>
+      <div class="">
+        <!--barra de pesquisa perfil-->
+        <div class="flex">
+          <div class=" m-6 grow">
+            <Input  placeholder="Pesquisa" />
+          </div>
+          <div class="perfil m-6">
+            <Avatar>
+          </div>
+        </div>
+        <!--sugestoes-->
+        <div>
+          <ul class="flex ml-6 m-4  text-lg font-bold justify-between ">
+            <li class=" mr-4 ">Todos</li>
+            <li class="mr-4">Decoração</li>
+            <li class="mr-4">Maquiagem</li>
+            <li class="mr-4">Lontras fofinhas</li>
+            <li class="mr-4">Pintura</li>
+            <li class="mr-4">Parede</li>
+            <li class="mr-4">Quadrinhos</li>
+            <li class="mr-4">Origami</li>
+            <li class="mr-4">Natal</li>
+            <li class="mr-4">Decoração</li>
+          </ul>
+        </div>
       </div>
-      <div class="" id="content">
-        <p>content</p>
+
+      <!--fotos-->
+      <div >
+        <ul class="grid grid-col-6 ">
+          <li class="">
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/736x/df/df/b5/dfdfb57bd8f4c3ac86819072f78c309b.jpg"
+            />
+          </li>
+          <li class="">
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/736x/43/32/79/433279ac978e0081e0690d486af8d321.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/736x/1e/ce/5f/1ece5fff6b4cff7d74e258587fc7824c.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/736x/5b/ab/13/5bab139f010287e92c264e25a4eb65fd.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/736x/06/1a/cb/061acba0605fc5a43e096e785487a55f.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/1200x/20/36/2f/20362f089cf6f9f27957936403cda4d0.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/1200x/5e/85/96/5e85967027ea4221eac470adac7c1ff9.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/1200x/4c/2c/2b/4c2c2b7038c3e4a13ec13c9d407ac0a8.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/736x/07/a6/96/07a69694c69d43de48d1bed07f31be4d.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="imagem"
+              src="https://i.pinimg.com/736x/c4/3a/dc/c43adc40d2540998f36f14fc4604e65f.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/1200x/1f/f6/13/1ff613287c6a853049bac770246379c5.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/736x/ec/e1/7b/ece17b1c77610b62cd2155ef8550a712.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/736x/70/e0/4f/70e04f23bea21fe17d54ac557a43037a.jpg"
+            />
+          </li>
+          <li>
+            <img
+              class="rounded-md"
+              src="https://i.pinimg.com/736x/2a/b9/18/2ab918adfdafa11692cb3a6cd72f7d0e.jpg"
+            />
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-  <div>
-    <Calendar
-      mode="single"
-      onSelect={setDate}
-      className="rounded-lg border"
-    />
-  </div>
-  <div class="grid place-items-center h-screen content-center">
-    <Button>Button</Button>
   </div>
 </body>
