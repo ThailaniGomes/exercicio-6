@@ -2,6 +2,11 @@
 import { House } from "lucide-react";
 import "../styles/global.css";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+const lista = [
+  {
+    url: "https://i.pinimg.com/736x/df/df/b5/dfdfb57bd8f4c3ac86819072f78c309b.jpg",
+  },
+];
 ---
 
 <head>
@@ -13,7 +18,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
   <title>Pagina Clone</title>
 </head>
 <body>
-  <div class="flex ">
+  <div class="flex">
     <!--barra lateral-->
     <nav class="flex flex-col basis-40 justify-between h-screen">
       <div class="logo">
@@ -42,34 +47,44 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
       <div class="">
         <!--barra de pesquisa perfil-->
         <div class="flex">
-          <div class=" m-6 grow flex-1 ">
-            <input class="bg-zinc-100 rounded-md w-360 h-10" placeholder="Pesquisa" type="text">
+          <div class="m-6 grow flex-1">
+            <input
+              class="bg-zinc-100 rounded-md w-360 h-10"
+              placeholder="Pesquisa"
+              type="text"
+            />
           </div>
           <div class="perfil m-6">
-            <Avatar className="w-12 h-12">
+            <Avatar className="w-12 h-12" />
+          </div>
+          <!--sugestoes-->
+          <div>
+            <ul class="flex ml-6 gap-4 text-lg font-bold justify-between">
+              <li>Todos</li>
+              <li>Decoração</li>
+              <li>Maquiagem</li>
+              <li>Lontras fofinhas</li>
+              <li>Pintura</li>
+              <li>Parede</li>
+              <li>Quadrinhos</li>
+              <li>Origami</li>
+              <li>Natal</li>
+              <li>Decoração</li>
+            </ul>
           </div>
         </div>
-        <!--sugestoes-->
-        <div>
-          <ul class="flex ml-6 gap-4  text-lg font-bold justify-between ">
-            <li>Todos</li>
-            <li>Decoração</li>
-            <li>Maquiagem</li>
-            <li>Lontras fofinhas</li>
-            <li>Pintura</li>
-            <li>Parede</li>
-            <li>Quadrinhos</li>
-            <li>Origami</li>
-            <li>Natal</li>
-            <li>Decoração</li>
-          </ul>
-        </div>
-      </div>
 
-      <!--fotos-->
-      <div >
-        <ul class="grid grid-cols-5 grid-flow-row-dense gap-2 m-6">
-          <li class="">
+        <!--fotos-->
+        <div>
+          <ul class="grid grid-cols-5 grid-flow-row-dense gap-2 m-6">
+            {
+              lista.map((foto) => (
+                <li class="">
+                  <img class="rounded-lg" src={foto.url} />
+                </li>
+              ))
+            }
+            <!-- <li class="">
             <img
               class="rounded-lg "
               src="https://i.pinimg.com/736x/df/df/b5/dfdfb57bd8f4c3ac86819072f78c309b.jpg"
@@ -152,8 +167,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
               class="rounded-md"
               src="https://i.pinimg.com/736x/2a/b9/18/2ab918adfdafa11692cb3a6cd72f7d0e.jpg"
             />
-          </li>
-        </ul>
+          </li> -->
+          </ul>
+        </div>
       </div>
     </div>
   </div>
