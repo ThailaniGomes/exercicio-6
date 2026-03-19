@@ -1,4 +1,5 @@
 ---
+import { House } from "lucide-react";
 import "../styles/global.css";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 ---
@@ -24,7 +25,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
       </div>
 
       <div class="grid grid-flow-row gap-8 content-center">
-        <span >home</span>
+        <House />
         <span>explore</span>
         <span>backup_table</span>
         <span>add_box</span>
@@ -45,7 +46,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
             <input class="bg-zinc-100 rounded-md w-360 h-10" placeholder="Pesquisa" type="text">
           </div>
           <div class="perfil m-6">
-            <Avatar class="w-12 h-12" src="">
+            <Avatar className="w-12 h-12">
           </div>
         </div>
         <!--sugestoes-->
@@ -67,7 +68,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
       <!--fotos-->
       <div >
-        <ul class="grid grid-cols-5 grid-flow-row-dense gap-5 m-6">
+        <ul class="grid grid-cols-5 grid-flow-row-dense gap-2 m-6">
           <li class="">
             <img
               class="rounded-lg "
