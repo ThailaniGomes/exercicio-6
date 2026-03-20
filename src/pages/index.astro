@@ -1,15 +1,24 @@
 ---
-import { House,Compass,LayoutPanelLeft,SquarePlus, Bell, MessageCircleMore,Settings} from "lucide-react";
+import {
+  House,
+  Compass,
+  LayoutPanelLeft,
+  SquarePlus,
+  Bell,
+  MessageCircleMore,
+  Settings,
+} from "lucide-react";
 import "../styles/global.css";
-import { Avatar} from "@/components/ui/avatar";
+import { Avatar } from "@/components/ui/avatar";
 /*const lista = [
   {
     url: "https://i.pinimg.com/736x/df/df/b5/dfdfb57bd8f4c3ac86819072f78c309b.jpg",
   },
-];
+];*/
+
 const response = await fetch("http://localhost:4321/api/fotos");
 const data = await response.json();
-const { fotos } = data.data;*/
+const fotos = data.fotos;
 ---
 
 <head>
@@ -79,15 +88,15 @@ const { fotos } = data.data;*/
 
         <!--fotos-->
         <div>
-          <!-- <ul class="grid grid-cols-5 grid-flow-row-dense gap-2 m-6">
+          <ul class="grid grid-cols-5 grid-flow-row-dense gap-2 m-6">
             {
               fotos.map((foto) => (
                 <li class="">
                   <img class="rounded-lg" src={foto.url} />
                 </li>
               ))
-              </ul>
-            }-->
+            }
+          </ul>
         </div>
       </div>
     </div>
