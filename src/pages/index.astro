@@ -32,16 +32,16 @@ const fotos = data.fotos;
 <body>
   <div class="flex">
     <!--barra lateral-->
-    <nav class="flex flex-col basis-40 justify-between h-screen">
+    <nav class="flex flex-col basis-60 justify-between h-screen items-center">
       <div class="logo">
         <img
-          class="icone-logo"
+          class=""
           src="https://images.ctfassets.net/h67z7i6sbjau/5zteWRcC1qbgLZoClcMmYl/a0391fdc321eddce7de41152108723b5/Brand_Guidelines_hero_2x.jpg?fm=webp&q=85"
           alt="Logo"
         />
       </div>
 
-      <div class="grid grid-flow-row gap-8 content-center">
+      <div class="grid grid-flow-row gap-8 ">
         <House />
         <Compass />
         <LayoutPanelLeft />
@@ -56,19 +56,21 @@ const fotos = data.fotos;
     </nav>
     <!--conteudo-->
     <div class="">
-      <div class="">
         <!--barra de pesquisa perfil-->
-        <div class="flex">
-          <div class="m-6 grow flex-1">
-            <input
-              class="bg-zinc-100 rounded-md w-360 h-10"
-              placeholder="Pesquisa"
-              type="text"
-            />
+        <div>
+          <div class="flex">
+            <div class="m-6 grow flex-1">
+              <input
+                class="bg-zinc-100 rounded-md w-360 h-10"
+                placeholder="Pesquisa"
+                type="text"
+              />
+            </div>
+            <div class="perfil m-6">
+              <Avatar className="w-12 h-12" />
+            </div>
           </div>
-          <div class="perfil m-6">
-            <Avatar className="w-12 h-12" />
-          </div>
+
           <!--sugestoes-->
           <div>
             <ul class="flex ml-6 gap-4 text-lg font-bold justify-between">
@@ -100,7 +102,6 @@ const fotos = data.fotos;
             }
           </ul>
         </div>
-      </div>
     </div>
   </div>
 </body>
