@@ -1,6 +1,9 @@
 import { addDays } from "date-fns";
 import { Button } from "./ui/button";
 import { Calendar } from "./ui/calendar";
+import { FieldGroup, Field } from "./ui/field";
+import { Checkbox } from "./ui/checkbox";
+import { Label } from "./ui/label";
 
 const semanaQueVem = addDays(new Date(), 7);
 
@@ -14,7 +17,11 @@ const logEvent = () => {
 };
 
 const logSelectedDate = (date) => {
-    console.log(`A data escolhida foi ${date}`)
+  console.log(`A data escolhida foi ${date}`);
+};
+
+const logChekedStatus = (chekedStatus) =>{
+  console.log(`Status ${chekedStatus}`)
 }
 
 const Sandbox = () => {
@@ -29,6 +36,12 @@ const Sandbox = () => {
         className="rounded-lg border"
         captionLayout="dropdown"
       />
+      <FieldGroup className="max-w-sm">
+        <Field orientation="horizontal">
+          <Checkbox id="terms-checkbox" name="terms-checkbox" onCheckedChange={logChekedStatus} />
+          <Label htmlFor="terms-checkbox">Accept terms and conditions</Label>
+        </Field>
+      </FieldGroup>
     </div>
   );
 };
