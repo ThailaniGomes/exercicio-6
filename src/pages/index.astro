@@ -92,7 +92,9 @@ const fotos = data.fotos;
             {
               fotos.map((foto) => (
                 <li class="">
-                  <img class="rounded-lg" src={foto.url} />
+                  <a href="/foto">
+                    <img class="rounded-lg" src={foto.url} />
+                  </a>
                 </li>
               ))
             }
